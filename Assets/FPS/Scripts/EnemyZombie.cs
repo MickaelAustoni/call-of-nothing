@@ -9,8 +9,13 @@ public class EnemyZombie : MonoBehaviour
 {
     // Public setting
     [Header("Parameters")] public Transform target;
+
     [Header("Damage")] public float damagePerHit = 5;
     public int damageArea = 2;
+
+    [Header("Sounds")] public AudioClip damageTickSometime;
+
+
     [Header("State")] public AIState aiState;
 
     public enum AIState
@@ -51,10 +56,14 @@ public class EnemyZombie : MonoBehaviour
 
     IEnumerator CreepUp()
     {
+        // Set invincible during creep up
+        _health.invincible = true;
+
         yield return new WaitForSeconds(2f);
         // Init walk & think
         Walk();
         StartCoroutine(Think());
+        _health.invincible = false;
     }
 
     IEnumerator Think()
@@ -92,6 +101,11 @@ public class EnemyZombie : MonoBehaviour
     void OnDamaged(float damage, GameObject damageSource)
     {
         _animator.Play("damege");
+        // Play the damage tick sound (30% chance)
+        if (damageTickSometime && Random.value > 0.9)
+        {
+            AudioUtility.CreateSFX(damageTickSometime, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
+        }
     }
 
     void OnTriggerEnter(Collider other)

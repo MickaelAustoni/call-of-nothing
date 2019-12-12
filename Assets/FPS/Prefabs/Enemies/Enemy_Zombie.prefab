@@ -1861,7 +1861,7 @@ Transform:
   m_GameObject: {fileID: 4121469272511682913}
   m_LocalRotation: {x: -0, y: -0.6158122, z: -0, w: -0.78789306}
   m_LocalPosition: {x: -18.51, y: 0, z: -7.25}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4121469272511251591}
   - {fileID: 4121469272511251589}
@@ -1905,6 +1905,7 @@ MonoBehaviour:
   target: {fileID: 0}
   damagePerHit: 5
   damageArea: 2
+  damageTickSometime: {fileID: 8300000, guid: c76059b8f6c0a4bc6a18475314d5bf00, type: 3}
   aiState: 0
 --- !u!195 &7187556911627302173
 NavMeshAgent:
@@ -1940,7 +1941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27364eefd6dd0341ba72a3bfc0d9727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   criticalHealthRatio: 0.3
 --- !u!114 &1642758904228518245
 MonoBehaviour:
@@ -2011,7 +2012,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   flashOnHitDuration: 0.2
-  damageTick: {fileID: 8300000, guid: a7fae22399a6e1d448dc0dd2210f1dac, type: 3}
+  damageTick: {fileID: 8300000, guid: 25e8bbe95ad4f344abd4dd8d7c8636ab, type: 3}
   deathVFX: {fileID: 8950624839484268180, guid: 2a8f5052fe50f7b41b17149abb0f7414,
     type: 3}
   deathVFXSpawnPoint: {fileID: 6732385540587953418}

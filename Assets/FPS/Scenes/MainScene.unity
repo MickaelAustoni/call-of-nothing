@@ -3721,6 +3721,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9087143436424816424, guid: 25a1b0efadb966e44889fce712c8ff8d,
+        type: 3}
+      propertyPath: damageTick
+      value: 
+      objectReference: {fileID: 8300000, guid: a7fae22399a6e1d448dc0dd2210f1dac, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25a1b0efadb966e44889fce712c8ff8d, type: 3}
 --- !u!1 &2729281214372112986
@@ -4802,6 +4807,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 598277302063295030, guid: 012d63212fd1fe646b661cb8446c7bd4,
+        type: 3}
+      propertyPath: message
+      value: Defonces tous les zombies !!!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 012d63212fd1fe646b661cb8446c7bd4, type: 3}
 --- !u!1001 &4008933581619590512
@@ -5029,7 +5039,7 @@ PrefabInstance:
         type: 3}
       propertyPath: damageTick
       value: 
-      objectReference: {fileID: 8300000, guid: c76059b8f6c0a4bc6a18475314d5bf00, type: 3}
+      objectReference: {fileID: 8300000, guid: 25e8bbe95ad4f344abd4dd8d7c8636ab, type: 3}
     - target: {fileID: 4121469272502201093, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_Enabled
@@ -5043,7 +5053,7 @@ PrefabInstance:
     - target: {fileID: 4121469272511251585, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.37
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4121469272511251585, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
@@ -5058,17 +5068,17 @@ PrefabInstance:
     - target: {fileID: 4121469272511251585, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6794416
+      value: 0.9997224
       objectReference: {fileID: 0}
     - target: {fileID: 4121469272511251585, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4121469272511251585, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.73372966
+      value: 0.023559831
       objectReference: {fileID: 0}
     - target: {fileID: 4121469272511251585, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
@@ -5083,7 +5093,7 @@ PrefabInstance:
     - target: {fileID: 4121469272511251585, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 274.4
+      value: 177.3
       objectReference: {fileID: 0}
     - target: {fileID: 4121469272511251585, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
@@ -5105,6 +5115,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4121469272601268818, guid: 346e105e17a744e1a8ffc6e2cf945313,
+        type: 3}
+      propertyPath: damageArea
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4597493094370383524, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_Enabled
@@ -5113,7 +5128,7 @@ PrefabInstance:
     - target: {fileID: 7187556911627302173, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_Speed
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7187556911627302173, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
