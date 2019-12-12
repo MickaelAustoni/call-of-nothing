@@ -1879,7 +1879,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4121469272511682913}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cdd9a8a49378b5d43b3ad16db56e8998, type: 3}
   m_Controller: {fileID: 9100000, guid: 369dd17bf8ccb40f9a7470a8b614f43a, type: 2}
   m_CullingMode: 1
@@ -1903,6 +1903,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  damagePerHit: 5
+  damageArea: 2
   aiState: 0
 --- !u!195 &7187556911627302173
 NavMeshAgent:
@@ -1914,7 +1916,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 1
+  m_Speed: 1.2
   m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 120

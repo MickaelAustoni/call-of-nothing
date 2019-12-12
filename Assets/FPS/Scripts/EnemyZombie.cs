@@ -9,7 +9,7 @@ public class EnemyZombie : MonoBehaviour
 {
     // Public setting
     [Header("Parameters")] public Transform target;
-    [Header("Damage")] public float damagePerHit = 1;
+    [Header("Damage")] public float damagePerHit = 5;
     public int damageArea = 2;
     [Header("State")] public AIState aiState;
 
