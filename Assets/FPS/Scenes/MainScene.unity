@@ -5025,6 +5025,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4038740126952519424, guid: 346e105e17a744e1a8ffc6e2cf945313,
+        type: 3}
+      propertyPath: damageTick
+      value: 
+      objectReference: {fileID: 8300000, guid: c76059b8f6c0a4bc6a18475314d5bf00, type: 3}
     - target: {fileID: 4121469272502201093, guid: 346e105e17a744e1a8ffc6e2cf945313,
         type: 3}
       propertyPath: m_Enabled

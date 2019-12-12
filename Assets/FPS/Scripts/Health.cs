@@ -42,8 +42,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage, GameObject damageSource)
     {
-        if (invincible)
-            return;
+        if (invincible) return;
 
         float healthBefore = currentHealth;
         currentHealth -= damage;

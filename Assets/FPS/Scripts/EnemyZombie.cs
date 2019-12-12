@@ -7,17 +7,23 @@ using Random = UnityEngine.Random;
 
 public class EnemyZombie : MonoBehaviour
 {
+    // Public setting
+    [Header("Parameters")] public Transform target;
+    [Header("Damage")] public float damagePerHit = 1;
+    public int damageArea = 2;
+    [Header("State")] public AIState aiState;
+
     public enum AIState
     {
         Chasing,
         Attack
     }
 
+    // Unity event
     public UnityAction onDamaged;
 
-    public Transform target;
-    public AIState aiState;
-
+    // Private
+    private GameObject _player;
     private NavMeshAgent _navMeshAgent;
     private Animator _animator;
     private Health _health;
@@ -27,10 +33,14 @@ public class EnemyZombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get Component
+        // Set GameObject/Component
+        _player = GameObject.Find("Player");
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         _health = GetComponent<Health>();
+
+        // Set size box collider from setting
+        GetComponent<BoxCollider>().size = new Vector3(damageArea, damageArea, damageArea);
 
         // Subscript event
         _health.onDamaged += OnDamaged;
@@ -64,6 +74,19 @@ public class EnemyZombie : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         _inAttackAnimation = false;
+    }
+
+    IEnumerator InflictDamageToPlayer()
+    {
+        yield return new WaitForSeconds(1f);
+
+        // Check if enemy is range to touch player
+        if (gameObject.GetComponent<BoxCollider>().bounds.Contains(_player.transform.position))
+        {
+            // Inflict damage
+            Damageable damageable = _player.GetComponent<Damageable>();
+            damageable.InflictDamage(damagePerHit, false, null);
+        }
     }
 
     void OnDamaged(float damage, GameObject damageSource)
@@ -108,6 +131,8 @@ public class EnemyZombie : MonoBehaviour
             // Play animation
             _inAttackAnimation = true;
             _animator.Play("atack0" + Random.Range(1, 3));
+            // Inflict player Damage
+            StartCoroutine(InflictDamageToPlayer());
             StartCoroutine(OnCompleteAttackAnimation());
         }
     }
